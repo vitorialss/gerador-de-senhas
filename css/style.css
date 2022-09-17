@@ -1,0 +1,133 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+html,
+body {
+    height: auto;
+    min-height: 100vh;
+}
+
+html {
+    background: linear-gradient(180deg, #EEF1FF 0%, #AAC4FF 100%);
+}
+
+input:focus {
+    outline: none;
+}
+
+#register-container {
+    max-width: 900px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
+#register-banner {
+    background: url(../img/download.webp);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+#banner-layer {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+#register-banner h1 {
+    font-family: 'Noto Serif', serif;
+    font-size: 4rem;
+    color: #FFF;
+    word-spacing: 50rem;
+
+}
+
+#register-form {
+    background-color: #FDFDFD;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#register-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+#register-form p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #AAA;
+    font-size: 0.8rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.form-control input {
+    border: none;
+    border-bottom: 1px solid #AAA;
+    padding: 0.6rem 0;
+}
+
+#generate-password {
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#generate-password:hover {
+    color: #0099ff;
+}
+
+#register-form #generated-password {
+    border: 1px solid #0099ff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: .4rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+#register-form #generated-password p {
+    color: #B1B2FF;
+    margin-bottom: 0.5rem;
+}
+
+#register-form input[type="submit"] {
+    background-color: #B1B2FF;
+    color: #FFF;
+    opacity: .8;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 1.4rem;
+    max-width: 150px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: 0.4s;
+}
+
+#register-form input[type="submit"]:hover {
+    opacity: 1;
+}
