@@ -32,14 +32,18 @@ const generatePassword = (getLettersLowerCase, getLettersUpperCase, getNumbers, 
         getSymbols
     ];
 
-    for (i = 0; i < passwordLength; i = i + generators.length) {
-        generators.forEach(() => {
-            const randomValue = generators[Math.floor(Math.random() * generators.length)]();
+    const pattern = new RegExp("(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*");
 
-            password += randomValue;
-        })
+    while (!pattern.test(password)) {
+        password = "";
+        for (i = 0; i < passwordLength; i = i + generators.length) {
+            generators.forEach(() => {
+                const randomValue = generators[Math.floor(Math.random() * generators.length)]();
+
+                password += randomValue;
+            })
+        }
     }
-
 
     generatedPasswordElement.style.display = "block";
     generatedPasswordElement.querySelector("h4").innerText = password;
